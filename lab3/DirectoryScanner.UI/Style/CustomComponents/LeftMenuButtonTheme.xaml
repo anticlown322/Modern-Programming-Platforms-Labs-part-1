@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+           TargetType="{x:Type RadioButton}"
+           x:Key="LeftMenuButtonTheme">
+        <Style.Resources>
+            <LinearGradientBrush x:Key="InnerTextColor">
+                <GradientStop Color="{StaticResource WindowBorderColor1}" 
+                              Offset="0" />
+                <GradientStop Color="{StaticResource MenuTextColorDark}" 
+                              Offset="1" />
+            </LinearGradientBrush>
+        </Style.Resources>
+
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid VerticalAlignment="Stretch"
+                              HorizontalAlignment="Stretch"
+                              Background="{TemplateBinding Background}">
+                            <TextBlock Text="{TemplateBinding Content}"
+                                       VerticalAlignment="Center"
+                                       Margin="50, 0, 0, 0"
+                                       Foreground="{StaticResource InnerTextColor}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Background" Value="{StaticResource MenuButtonColorLight_Solid}"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style.Setters>
+
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard x:Name="CheckAnimation">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                            To="{StaticResource MenuButtonColorDark}"
+                                            Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <StopStoryboard BeginStoryboardName="CheckAnimation"/>
+                    <!--code below works without StopStoryboard but i think there potential bugs
+                    Maybe should use VisualStateManager.My skill issue ^_^-->
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                            To="{StaticResource MenuButtonColorLight}"
+                                            Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

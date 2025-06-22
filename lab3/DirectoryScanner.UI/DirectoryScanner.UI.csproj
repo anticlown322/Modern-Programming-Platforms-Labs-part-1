@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>Resources\Icons\analyze.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="MVVM\Models\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Images\close.png" />
+      <Resource Include="Resources\Images\close.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\minimize.png" />
+      <Resource Include="Resources\Images\minimize.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\github-logo.png" />
+      <Resource Include="Resources\Images\github-logo.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\linkedin-logo.png" />
+      <Resource Include="Resources\Images\linkedin-logo.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\telegram-logo.png" />
+      <Resource Include="Resources\Images\telegram-logo.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\file.png" />
+      <Resource Include="Resources\Images\file.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\folder.png" />
+      <Resource Include="Resources\Images\folder.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="MVVM\Views\DirectoryScannerView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_DeploymentManifestIconFile Remove="Resources\Icons\analyze.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DirectoryScanner.Backend\DirectoryScanner.Backend.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="WindowsAPICodePack" Version="8.0.6" />
+    </ItemGroup>
+</Project>

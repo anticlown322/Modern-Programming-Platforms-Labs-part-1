@@ -1,0 +1,53 @@
+<UserControl x:Class="DirectoryScanner.UI.MVVM.Views.HelpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:DirectoryScanner.UI.MVVM.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewModels:HelpViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" 
+             d:DesignWidth="1130">
+    <StackPanel>
+        <!--Title-->
+        <TextBlock 
+            HorizontalAlignment="Center"
+            FontSize="40"
+            FontWeight="Bold"
+            Foreground="White" 
+            Text="Help Section"/>
+        
+        <!--Help content-->
+        <TextBlock
+            Margin="20"
+            FontSize="22"
+            Foreground="White"
+            TextWrapping="WrapWithOverflow">
+            The purpose of this application is to scan specified directory from 
+            the computer file system and show how much space files consume. <LineBreak/>
+            To start the scanning process, click the "Select directory and start scan" button 
+            on the "Scanner" page. Then select the directory from the file system for scanning. 
+            Be patient, scanning process may take some time. <LineBreak/>
+            If you want to stop the scanning process, just click the "Cancel" button. 
+            But remember, you will see only partial results then.
+            <LineBreak/>
+            <LineBreak/>
+            To inspect the result, use the "file system"-like screen on the "Scanner" page.
+            It will show files and directories starting from the specified directory. 
+            Also you will see the calculations showing how much space files and directories consume.
+            <LineBreak/>
+            <LineBreak/>
+            Currently available hotkeys: <LineBreak/>
+            • Esc - close application<LineBreak/>
+            • Ctrl+M - minimize window<LineBreak/>
+        </TextBlock>
+
+        <!--End-->
+        <TextBlock 
+            HorizontalAlignment="Center"
+            FontSize="40"
+            FontWeight="Bold"
+            Foreground="White" 
+            Text="Enjoy!"/>
+    </StackPanel>
+</UserControl>
