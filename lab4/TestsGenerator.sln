@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsGenerator.Example", "TestsGenerator.Example\TestsGenerator.Example.csproj", "{0CE36AD7-D08E-43E9-BF90-3D7A4F41F840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsGenerator.Backend", "TestsGenerator.Backend\TestsGenerator.Backend.csproj", "{3097D60E-96BE-45E4-A661-AFC9198BCEA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsGenerator.Tests", "TestsGenerator.Tests\TestsGenerator.Tests.csproj", "{27A2B72D-5205-4066-9B53-474FF632D5B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CE36AD7-D08E-43E9-BF90-3D7A4F41F840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE36AD7-D08E-43E9-BF90-3D7A4F41F840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE36AD7-D08E-43E9-BF90-3D7A4F41F840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE36AD7-D08E-43E9-BF90-3D7A4F41F840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3097D60E-96BE-45E4-A661-AFC9198BCEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3097D60E-96BE-45E4-A661-AFC9198BCEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3097D60E-96BE-45E4-A661-AFC9198BCEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3097D60E-96BE-45E4-A661-AFC9198BCEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27A2B72D-5205-4066-9B53-474FF632D5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27A2B72D-5205-4066-9B53-474FF632D5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27A2B72D-5205-4066-9B53-474FF632D5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27A2B72D-5205-4066-9B53-474FF632D5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
