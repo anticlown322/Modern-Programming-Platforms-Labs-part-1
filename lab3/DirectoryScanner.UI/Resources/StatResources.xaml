@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Images-->
+    <BitmapImage  x:Key="Github" UriSource="/DirectoryScanner.UI;component/Resources/Images/github-logo.png"/>
+    <BitmapImage  x:Key="Telegram" UriSource="/DirectoryScanner.UI;component/Resources/Images/telegram-logo.png"/>
+    <BitmapImage  x:Key="Linkedin" UriSource="/DirectoryScanner.UI;component/Resources/Images/linkedin-logo.png"/>
+    
+    <BitmapImage x:Key="CloseWindow" UriSource="/DirectoryScanner.UI;component/Resources/Images/close.png"/>
+    <BitmapImage x:Key="MinimizeWindow" UriSource="/DirectoryScanner.UI;component/Resources/Images/minimize.png"/>
+    
+    <BitmapImage x:Key="File" UriSource="/DirectoryScanner.UI;component/Resources/Images/file.png"/>
+    <BitmapImage x:Key="Directory" UriSource="/DirectoryScanner.UI;component/Resources/Images/folder.png"/>
+</ResourceDictionary>
